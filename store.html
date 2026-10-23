@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Store | Scholar's Haven</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-brand">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Scholar's <span>Haven</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu"><span
+          class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item active"><a class="nav-link" href="store.html">Store</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="inquiry.html">Inquiry</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Cart <span class="badge badge-warning"
+                id="cartCount">0</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="page-banner">
+    <div class="container">
+      <h1>Book store</h1>
+      <p class="mb-0">Search, filter and add books to your cart.</p>
+    </div>
+  </div>
+  <div class="container mt-4">
+    <div class="alert alert-success d-none" id="cartMsg"></div>
+    <div class="form-row mb-3">
+      <div class="col-md-6 mb-2"><input type="text" class="form-control" id="search"
+          placeholder="Search by book title or author"></div>
+      <div class="col-md-4 mb-2"><select class="form-control" id="category">
+          <option value="">All categories</option>
+          <option>Web Design</option>
+          <option>Programming</option>
+          <option>Database</option>
+          <option>Networking</option>
+          <option>General</option>
+        </select></div>
+      <div class="col-md-2 mb-2 small text-muted d-flex align-items-center" id="resultInfo"></div>
+    </div>
+    <div class="row" id="bookList">
+      <div class="col-md-4 col-sm-6 mb-4 book" data-title="HTML &amp; CSS: Design and Build Websites"
+        data-author="Jon Duckett" data-cat="Web Design">
+        <div class="card h-100"><img class="card-img-top cover" src="images/book1.jpg"
+            alt="HTML &amp; CSS: Design and Build Websites">
+          <div class="card-body"><span class="badge badge-secondary mb-2">Web Design</span>
+            <h5 class="card-title">HTML &amp; CSS: Design and Build Websites</h5>
+            <p class="card-text mb-1 small">Jon Duckett</p>
+            <p class="card-text small text-muted">Visual, beginner friendly guide to HTML and CSS.</p>
+            <p class="price mb-0">&#8377;650</p>
+          </div>
+          <div class="card-footer bg-white"><button type="button" class="btn btn-accent btn-sm add-btn" data-id="1"
+              data-title="HTML &amp; CSS: Design and Build Websites" data-price="650" data-image="book1.jpg">Add to
+              cart</button> <a href="inquiry.html?book=HTML%20%26%20CSS%3A%20Design%20and%20Build%20Websites"
+              class="btn btn-outline-dark btn-sm">Inquire</a></div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-4 book" data-title="Learning Web Design" data-author="Jennifer Robbins"
+        data-cat="Web Design">
+        <div class="card h-100"><img class="card-img-top cover" src="images/book2.jpg" alt="Learning Web Design">
+          <div class="card-body"><span class="badge badge-secondary mb-2">Web Design</span>
+            <h5 class="card-title">Learning Web Design</h5>
+            <p class="card-text mb-1 small">Jennifer Robbins</p>
+            <p class="card-text small text-muted">Step by step introduction to building web pages.</p>
+            <p class="price mb-0">&#8377;720</p>
+          </div>
+          <div class="card-footer bg-white"><button type="button" class="btn btn-accent btn-sm add-btn" data-id="2"
+              data-title="Learning Web Design" data-price="720" data-image="book2.jpg">Add to cart</button> <a
+              href="inquiry.html?book=Learning%20Web%20Design" class="btn btn-outline-dark btn-sm">Inquire</a></div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-4 book" data-title="JavaScript: The Good Parts" data-author="Douglas Crockford"
+        data-cat="Programming">
+        <div class="card h-100"><img class="card-img-top cover" src="images/book3.jpg" alt="JavaScript: The Good Parts">
+          <div class="card-body"><span class="badge badge-secondary mb-2">Programming</span>
+            <h5 class="card-title">JavaScript: The Good Parts</h5>
+            <p class="card-text mb-1 small">Douglas Crockford</p>
+            <p class="card-text small text-muted">Short guide to the best features of JavaScript.</p>
+            <p class="price mb-0">&#8377;480</p>
+          </div>
+          <div class="card-footer bg-white"><button type="button" class="btn btn-accent btn-sm add-btn" data-id="3"
+              data-title="JavaScript: The Good Parts" data-price="480" data-image="book3.jpg">Add to cart</button> <a
+              href="inquiry.html?book=JavaScript%3A%20The%20Good%20Parts"
+              class="btn btn-outline-dark btn-sm">Inquire</a></div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-4 book" data-title="Eloquent JavaScript" data-author="Marijn Haverbeke"
+        data-cat="Programming">
+        <div class="card h-100"><img class="card-img-top cover" src="images/book4.jpg" alt="Eloquent JavaScript">
+          <div class="card-body"><span class="badge badge-secondary mb-2">Programming</span>
+            <h5 class="card-title">Eloquent JavaScript</h5>
+            <p class="card-text mb-1 small">Marijn Haverbeke</p>
+            <p class="card-text small text-muted">Modern introduction to programming with JavaScript.</p>
+            <p class="price mb-0">&#8377;550</p>
+          </div>
+          <div class="card-footer bg-white"><button type="button" class="btn btn-accent btn-sm add-btn" data-id="4"
+              data-title="Eloquent JavaScript" data-price="550" data-image="book4.jpg">Add to cart</button> <a
+              href="inquiry.html?book=Eloquent%20JavaScript" class="btn btn-outline-dark btn-sm">Inquire</a></div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-4 book" data-title="Head First Java" data-author="Kathy Sierra"
+        data-cat="Programming">
+        <div class="card h-100"><img class="card-img-top cover" src="images/book5.jpg" alt="Head First Java">
+          <div class="card-body"><span class="badge badge-secondary mb-2">Programming</span>
+            <h5 class="card-title">Head First Java</h5>
+            <p class="card-text mb-1 small">Kathy Sierra</p>
+            <p class="card-text small text-muted">Easy to follow Java book with lots of pictures.</p>
+            <p class="price mb-0">&#8377;800</p>
+          </div>
+          <div class="card-footer bg-white"><button type="button" class="btn btn-accent btn-sm add-btn" data-id="5"
+              data-title="Head First Java" data-price="800" data-image="book5.jpg">Add to cart</button> <a
+              href="inquiry.html?book=Head%20First%20Java" class="btn btn-outline-dark btn-sm">Inquire</a></div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-4 book" data-title="Let Us C" data-author="Yashavant Kanetkar"
+        data-cat="Programming">
+        <div class="card h-100"><img class="card-img-top cover" src="images/book6.jpg" alt="Let Us C">
+          <div class="card-body"><span class="badge badge-secondary mb-2">Programming</span>
+            <h5 class="card-title">Let Us C</h5>
+            <p class="card-text mb-1 small">Yashavant Kanetkar</p>
+            <p class="card-text small text-muted">Popular C language book for BCA students.</p>
+            <p class="price mb-0">&#8377;420</p>
+          </div>
+          <div class="card-footer bg-white"><button type="button" class="btn btn-accent btn-sm add-btn" data-id="6"
+              data-title="Let Us C" data-price="420" data-image="book6.jpg">Add to cart</button> <a
+              href="inquiry.html?book=Let%20Us%20C" class="btn btn-outline-dark btn-sm">Inquire</a></div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-4 book" data-title="Database System Concepts" data-author="Silberschatz, Korth"
+        data-cat="Database">
+        <div class="card h-100"><img class="card-img-top cover" src="images/book7.jpg" alt="Database System Concepts">
+          <div class="card-body"><span class="badge badge-secondary mb-2">Database</span>
+            <h5 class="card-title">Database System Concepts</h5>
+            <p class="card-text mb-1 small">Silberschatz, Korth</p>
+            <p class="card-text small text-muted">Standard textbook for DBMS and SQL.</p>
+            <p class="price mb-0">&#8377;950</p>
+          </div>
+          <div class="card-footer bg-white"><button type="button" class="btn btn-accent btn-sm add-btn" data-id="7"
+              data-title="Database System Concepts" data-price="950" data-image="book7.jpg">Add to cart</button> <a
+              href="inquiry.html?book=Database%20System%20Concepts" class="btn btn-outline-dark btn-sm">Inquire</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-4 book" data-title="Fundamentals of Database Systems"
+        data-author="Elmasri, Navathe" data-cat="Database">
+        <div class="card h-100"><img class="card-img-top cover" src="images/book8.jpg"
+            alt="Fundamentals of Database Systems">
+          <div class="card-body"><span class="badge badge-secondary mb-2">Database</span>
+            <h5 class="card-title">Fundamentals of Database Systems</h5>
+            <p class="card-text mb-1 small">Elmasri, Navathe</p>
+            <p class="card-text small text-muted">Clear explanation of database design.</p>
+            <p class="price mb-0">&#8377;900</p>
+          </div>
+          <div class="card-footer bg-white"><button type="button" class="btn btn-accent btn-sm add-btn" data-id="8"
+              data-title="Fundamentals of Database Systems" data-price="900" data-image="book8.jpg">Add to cart</button>
+            <a href="inquiry.html?book=Fundamentals%20of%20Database%20Systems"
+              class="btn btn-outline-dark btn-sm">Inquire</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-4 book" data-title="Computer Networks" data-author="Andrew S. Tanenbaum"
+        data-cat="Networking">
+        <div class="card h-100"><img class="card-img-top cover" src="images/book9.jpg" alt="Computer Networks">
+          <div class="card-body"><span class="badge badge-secondary mb-2">Networking</span>
+            <h5 class="card-title">Computer Networks</h5>
+            <p class="card-text mb-1 small">Andrew S. Tanenbaum</p>
+            <p class="card-text small text-muted">Networking concepts from basics to protocols.</p>
+            <p class="price mb-0">&#8377;850</p>
+          </div>
+          <div class="card-footer bg-white"><button type="button" class="btn btn-accent btn-sm add-btn" data-id="9"
+              data-title="Computer Networks" data-price="850" data-image="book9.jpg">Add to cart</button> <a
+              href="inquiry.html?book=Computer%20Networks" class="btn btn-outline-dark btn-sm">Inquire</a></div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-4 book" data-title="Data Communications and Networking"
+        data-author="Behrouz A. Forouzan" data-cat="Networking">
+        <div class="card h-100"><img class="card-img-top cover" src="images/book10.jpg"
+            alt="Data Communications and Networking">
+          <div class="card-body"><span class="badge badge-secondary mb-2">Networking</span>
+            <h5 class="card-title">Data Communications and Networking</h5>
+            <p class="card-text mb-1 small">Behrouz A. Forouzan</p>
+            <p class="card-text small text-muted">Well illustrated book on data communication.</p>
+            <p class="price mb-0">&#8377;780</p>
+          </div>
+          <div class="card-footer bg-white"><button type="button" class="btn btn-accent btn-sm add-btn" data-id="10"
+              data-title="Data Communications and Networking" data-price="780" data-image="book10.jpg">Add to
+              cart</button> <a href="inquiry.html?book=Data%20Communications%20and%20Networking"
+              class="btn btn-outline-dark btn-sm">Inquire</a></div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-4 book" data-title="The Alchemist" data-author="Paulo Coelho" data-cat="General">
+        <div class="card h-100"><img class="card-img-top cover" src="images/book11.jpg" alt="The Alchemist">
+          <div class="card-body"><span class="badge badge-secondary mb-2">General</span>
+            <h5 class="card-title">The Alchemist</h5>
+            <p class="card-text mb-1 small">Paulo Coelho</p>
+            <p class="card-text small text-muted">Inspiring novel about following your dreams.</p>
+            <p class="price mb-0">&#8377;299</p>
+          </div>
+          <div class="card-footer bg-white"><button type="button" class="btn btn-accent btn-sm add-btn" data-id="11"
+              data-title="The Alchemist" data-price="299" data-image="book11.jpg">Add to cart</button> <a
+              href="inquiry.html?book=The%20Alchemist" class="btn btn-outline-dark btn-sm">Inquire</a></div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-4 book" data-title="Wings of Fire" data-author="A. P. J. Abdul Kalam"
+        data-cat="General">
+        <div class="card h-100"><img class="card-img-top cover" src="images/book12.jpg" alt="Wings of Fire">
+          <div class="card-body"><span class="badge badge-secondary mb-2">General</span>
+            <h5 class="card-title">Wings of Fire</h5>
+            <p class="card-text mb-1 small">A. P. J. Abdul Kalam</p>
+            <p class="card-text small text-muted">Autobiography of Dr. A. P. J. Abdul Kalam.</p>
+            <p class="price mb-0">&#8377;250</p>
+          </div>
+          <div class="card-footer bg-white"><button type="button" class="btn btn-accent btn-sm add-btn" data-id="12"
+              data-title="Wings of Fire" data-price="250" data-image="book12.jpg">Add to cart</button> <a
+              href="inquiry.html?book=Wings%20of%20Fire" class="btn btn-outline-dark btn-sm">Inquire</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="alert alert-warning d-none" id="noBooks">No books found. Try a different search or <a
+        href="inquiry.html">send us an inquiry</a>.</div>
+    <nav id="pagerBox">
+      <ul class="pagination justify-content-center" id="pager"></ul>
+    </nav>
+  </div>
+  <footer class="bg-brand text-white py-4 mt-5">
+    <div class="container d-md-flex justify-content-between">
+      <p class="mb-1">&copy; <span id="year"></span> Scholar's Haven Book Store. College project.</p>
+      <p class="mb-1">Built with <a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/"
+          target="_blank" rel="noopener">Bootstrap 4.1.3</a></p>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

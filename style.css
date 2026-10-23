@@ -1,0 +1,129 @@
+/* Extra styling only; layout and components come from Bootstrap 4.1.3 */
+body {
+    color: #29201c;
+    background: #fbf8f3;
+}
+
+.navbar-brand span {
+    color: #e0a64f;
+}
+
+.hero {
+    background: #f1e8d8;
+    padding: 60px 0;
+}
+
+.hero h1 {
+    color: #3b2418;
+    font-weight: 700;
+}
+
+.section-title {
+    color: #3b2418;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card img.cover {
+    height: 300px;
+    object-fit: contain;
+    background: #f1e8d8;
+    padding: 14px;
+}
+
+.btn-accent {
+    background: #9a642e;
+    border-color: #9a642e;
+    color: #fff;
+    font-weight: 600;
+}
+
+.btn-accent:hover {
+    background: #74481f;
+    border-color: #74481f;
+    color: #fff;
+}
+
+.bg-brand {
+    background: #211915 !important;
+}
+
+footer a {
+    color: #e0a64f;
+}
+
+.page-banner {
+    background: #211915;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.price {
+    color: #9a642e;
+    font-weight: 700;
+}
+
+/* Fonts: Poppins for text, Playfair Display for headings */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+}
+
+.navbar-brand {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+.hero h1 {
+    font-size: 2.6rem;
+    line-height: 1.2;
+}
+
+.card {
+    border: 0;
+    box-shadow: 0 4px 14px rgba(33, 25, 21, .14);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-title {
+    font-weight: 700;
+    color: #3b2418;
+    font-size: 1.05rem;
+}
+
+.btn {
+    font-weight: 500;
+    border-radius: 6px;
+}
+
+.hero img {
+    border-radius: 12px !important;
+    box-shadow: 0 8px 24px rgba(33, 25, 21, .22);
+}
+
+/* Cart page */
+.cart-cover {
+    width: 45px;
+    height: 62px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.table td {
+    vertical-align: middle;
+}
